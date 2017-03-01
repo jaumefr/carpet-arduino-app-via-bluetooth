@@ -11,18 +11,18 @@ long int ultimaVegada= 0;
 
 char dadaEnviar = '1';
 
-SoftwareSerial BT1(10, 11); // RX | TX
+//SoftwareSerial BT1(10, 11); // RX | TX
 void setup()
-   { pinMode(8, OUTPUT);        // Al poner en HIGH forzaremos el modo AT
-     pinMode(9, OUTPUT);        // cuando se alimente de aqui
-     digitalWrite(9, HIGH);
-     delay (500) ;              // Espera antes de encender el modulo
+   { //pinMode(8, OUTPUT);        // Al poner en HIGH forzaremos el modo AT
+     //pinMode(9, OUTPUT);        // cuando se alimente de aqui
+     //digitalWrite(9, HIGH);
+     delay (3000);             // Espera antes de encender el modulo
      Serial.begin(9600);
-     Serial.println("Levantando el modulo HC-06");
-     digitalWrite (8, HIGH);    //Enciende el modulo
-     Serial.println("Esperando comandos AT:");
-     BT1.begin(9600); 
-     delay(5000);
+     //Serial.println("Levantando el modulo HC-06");
+     //digitalWrite (8, HIGH);    //Enciende el modulo
+     //Serial.println("Esperando comandos AT:");
+     //BT1.begin(9600); 
+     //delay(5000);
    }
 
 void loop()
@@ -60,7 +60,7 @@ void loop()
     Serial.println(sensorActual);
     //Serial.println("tempsAra"); Serial.println(sensorActual);
     
-    BT1.write(sensorActual);
+    //BT1.write(sensorActual);
     
     ultimaVegada = tempsAra;
     sensorAnterior= sensorActual;
