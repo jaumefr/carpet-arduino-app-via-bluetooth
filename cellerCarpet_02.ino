@@ -45,7 +45,7 @@ void loop()
   }
 
   if((sensorActual!=sensorAnterior) || (sensorActual==sensorAnterior && (tempsAra > (ultimaVegada + margeTemps)))){
-    Serial.println(sensorActual);
+    Serial.print(sensorActual);
     ultimaVegada = tempsAra;
     sensorAnterior= sensorActual;  
   }      
